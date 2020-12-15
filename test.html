@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Renderer.css"></link>
+    <!--<script type="text/javascript" src="Parser.js"></script>
+    <script type="text/javascript" src="Renderer.js"></script>-->
+    <title>Document</title>
+</head>
+<body>
+    <div id="stack" class="stack">
+        <div class="term">
+            <div class="numb">3</div>
+            <div class="operator">&plus;</div>
+            <div class="numb">5</div>
+        </div>
+        <div class="operator">&plus;</div>
+        <div class="fraction">
+            <div class="num">
+                <div class="numb">1</div>
+                <div class="operator">&minus;</div>
+                <div class="numb">5</div>
+            </div>
+            <div class="stack divide-line"></div>
+            <div class="den"><div class="numb">2</div></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="Parser.js"></script>
+    <script type="text/javascript" src="Renderer.js"></script>
+    <!--<script>
+        var position = {
+            x : 0,
+            y : 0
+        };
+        var float_el = null;
+        for(var ele of document.getElementsByClassName('numb'))
+        {
+
+        }
+        /*for(var element of document.getElementsByClassName('numb'))
+        {
+            //console.log(element);
+            element.onmouseenter = function() {
+                console.log(float_el);
+                if(float_el != null)
+                {
+                    if(this.parentElement === float_el.parentElement || (this.parentElement.className == 'term' && this.parentElement === float_el.parentElement))
+                    {
+                        this.style.backgroundColor = 'grey';
+                    }
+                    else if(this.parentElement.className == 'term')
+                    {
+                        if(this.parentElement.parentElement === this.parentElement.parentElement)
+                        {
+                            this.parentElement.style.backgroundColor = 'grey';
+                            for(var child of this.parentNode.children)
+                            {
+                                child.style.backgroundColor = 'grey';
+                            }
+                        } 
+                    }
+                    else if(this.parentElement.className == 'num' || this.parentElement.className == 'den')
+                    {
+                        /*if(((this.parentElement.parentElement.previousElementSibling.previousElementSibling === float_el.parentElement.parentElement && this.parentElement.parentElement.previousElementSibling.innerHTML != '&middot;') || (float_el.parentElement.parentElement.previousElementSibling.previousElementSibling === this.parentElement.parentElement && float_el.parentElement.parentElement.previousElementSibling.innerHTML != '&middot;')))
+                        {
+                            //this.parentElement.parentElement.style.backgroundColor = 'grey';
+                        }*/
+                        /*if(this.parentElement.parentElement === float_el.parentElement.parentElement)
+                        {
+                            this.style.backgroundColor = 'grey';
+                        }
+                        else
+                        {
+                            this.parentElement.style.backgroundColor = 'grey';
+                            for(var child of this.parentNode.children)
+                            {
+                                child.style.backgroundColor = 'grey';
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    this.style.backgroundColor = 'grey';
+                }
+            }
+            element.onmouseleave = function() {
+                //console.log(this);
+                if(float_el != null)
+                {
+                    if(this.parentElement === float_el.parentElement || (this.parentElement.className == 'term' && this.parentElement === float_el.parentElement))
+                    {
+                        this.style.backgroundColor = 'white';
+                    }
+                    else if(this.parentElement.className == 'term')
+                    {
+                        if(this.parentElement.parentElement === this.parentElement.parentElement)
+                        {
+                            this.parentElement.style.backgroundColor = 'white';
+                            for(var child of this.parentNode.children)
+                            {
+                                child.style.backgroundColor = 'white';
+                            } 
+                        } 
+                    }
+                    else if(this.parentElement.className == 'num' || this.parentElement.className == 'den')
+                    {
+                        /*if(((this.parentElement.parentElement.previousElementSibling.previousElementSibling === float_el.parentElement.parentElement && this.parentElement.parentElement.previousElementSibling.innerHTML != '&middot;') || (float_el.parentElement.parentElement.previousElementSibling.previousElementSibling === this.parentElement.parentElement && float_el.parentElement.parentElement.previousElementSibling.innerHTML != '&middot;')))
+                        {
+                            //this.parentElement.parentElement.style.backgroundColor = 'white';
+                        }*/
+                        /*if(this.parentElement.parentElement === float_el.parentElement.parentElement)
+                        {
+                            this.parentElement.style.backgroundColor = 'white';
+                            for(var child of this.parentNode.children)
+                            {
+                                child.style.backgroundColor = 'white';
+                            }
+                        }
+                        else
+                        {
+                            this.parentElement.style.backgroundColor = 'white';
+                            for(var child of this.parentNode.children)
+                            {
+                                child.style.backgroundColor = 'white';
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    this.style.backgroundColor = 'white';
+                }
+            }
+            element.onmousedown = function(event) {
+                const el = this;
+                //console.log('down');
+                float_el = this;
+                var copy = this.cloneNode(true);
+                copy.id = "floating"
+                this.style.visibility = 'hidden';
+                copy.style.backgroundColor = 'rgba(255, 255, 255, 0)';
+                this.style.position = 'absolute';
+                copy.style.position = 'absolute';
+                copy.style.left = window.getComputedStyle(el).left;
+                copy.style.top = window.getComputedStyle(el).top;
+                position.x = parseFloat(copy.style.left.split('px')[0]) - parseFloat(event.clientX);
+                position.y = parseFloat(copy.style.top.split('px')[0]) - parseFloat(event.clientY);
+                //console.log(position)
+                this.style.position = 'relative';
+                document.body.append(copy);
+                //event.preventDefault();
+            }
+        }
+        document.body.onmousemove = function(event) {
+            event.preventDefault();
+            if(document.getElementById('floating'))
+            {
+                //console.log('moving');
+                document.getElementById('floating').style.left = (event.clientX + position.x).toString() + 'px';
+                document.getElementById('floating').style.top = (event.clientY + position.y).toString() + 'px';
+                //document.getElementById('floating').blur();
+            }
+        }
+        document.body.onmouseup = function(event) {
+            event.preventDefault();
+            //console.log('up');
+            if(document.getElementById('floating')) document.getElementById('floating').remove();
+            float_el.style.visibility = 'visible';
+            float_el = null;
+        }*/
+    </script>-->
+</body>
+</html>

@@ -1,0 +1,78 @@
+* {
+    border: 0px;
+    padding: 2px;
+    margin: 2px;
+    background-color: rgba(255,255,255,0);
+}
+
+.stack {
+    display: flex;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+
+.term {
+    display: flex;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+
+.num {
+    display: flex;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+
+.den {
+    display: flex;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+
+.var {
+    display: flex;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+
+.numb {
+    display: flex;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+
+.parentheses {
+    font-size: 200px;
+    font-weight: 100;
+}
+
+.divide-line {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+
+.fraction {
+    vertical-align: middle;
+    font-size: 100px;
+}
+
+.operator {
+    display: flex;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
