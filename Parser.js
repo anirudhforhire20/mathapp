@@ -29,10 +29,13 @@ function CalculateAnimations(ele, floating)
 {
     if(floating != null)
     {
+        //console.log(floating.parentElement, ele.parentElement);
         if(ele.classList.contains('operator'))
         {
             ele.onmouseenter = function() {
                 this.parentElement.style.backgroundColor = 'grey';
+                hover_el = this.parentElement;
+                //console.log(hover_el, float_el)
                 /*for(var ele of this.parentElement.children)
                 {
                     ele.style.backgroundColor = 'grey';
@@ -40,6 +43,7 @@ function CalculateAnimations(ele, floating)
             }
             ele.onmouseleave = function() {
                 this.parentElement.style.backgroundColor = 'rgba(255,255,255,0)';
+                hover_el = null;
                 /*for(var ele of this.parentElement.children)
                 {
                     ele.style.backgroundColor = 'white';
@@ -56,9 +60,12 @@ function CalculateAnimations(ele, floating)
         {
             ele.onmouseenter = function() {
                 this.style.backgroundColor = 'grey';
+                hover_el = this;
+                //console.log(hover_el, float_el);
             }
             ele.onmouseleave = function() {
                 this.style.backgroundColor = 'rgba(255,255,255,0)';
+                hover_el = null;
             }
         }
         else if(ele.parentElement.parentElement === floating.parentElement.parentElement)
@@ -67,10 +74,36 @@ function CalculateAnimations(ele, floating)
             {
                 ele.onmouseenter = function() {
                     this.style.backgroundColor = 'grey';
+                    hover_el = this;
+                    //console.log(hover_el, float_el);
                 }
                 ele.onmouseleave = function() {
                     this.style.backgroundColor = 'rgba(255,255,255,0)';
+                    hover_el = null;
                 }   
+            }
+            else
+            {
+                ele.onmouseenter = function() {
+                    this.parentElement.style.backgroundColor = 'grey';
+                    hover_el = this;
+                }
+                ele.onmouseleave = function() {
+                    this.parentElement.style.backgroundColor = 'rgba(255,255,255,0)';
+                    hover_el = null;
+                }
+            }
+        }
+        else if(ele.parentElement.parentElement == floating.parentElement)
+        {
+            ele.onmouseenter = function() {
+                this.parentElement.style.backgroundColor = 'grey';
+                hover_el = this;
+                //console.log(hover_el, float_el);
+            }
+            ele.onmouseleave = function() {
+                this.parentElement.style.backgroundColor = 'rgba(255,255,255,0)';
+                hover_el = null;
             }
         }
     }

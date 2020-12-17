@@ -4,6 +4,7 @@ var position = {
     y : 0
 };
 var float_el = null;
+var hover_el = null;
 function Calculate()
 {
     var elements = [];
@@ -13,6 +14,7 @@ function Calculate()
             const el = this;
             //console.log('down');
             float_el = this;
+            //console.log(float_el);
             var copy = this.cloneNode(true);
             for(var e of document.getElementsByClassName('numb'))
             {
@@ -94,6 +96,7 @@ document.body.onmouseup = function(event) {
         document.getElementById('floating').remove();
     } 
     float_el.style.visibility = 'visible';
+    MathOperation(hover_el, float_el);
     float_el = null;
     Calculate();
 }
