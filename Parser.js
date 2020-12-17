@@ -70,7 +70,7 @@ function CalculateAnimations(ele, floating)
         }
         else if(ele.parentElement.parentElement === floating.parentElement.parentElement)
         {
-            if(ele.classList.contains("num") || ele.classList.contains("den"))
+            if(ele.parentElement.classList.contains("num") || ele.parentElement.classList.contains("den"))
             {
                 ele.onmouseenter = function() {
                     this.style.backgroundColor = 'grey';
