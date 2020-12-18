@@ -58,7 +58,7 @@ function MathOperation(div1, div2)
                 {
                     if(div2.parentElement.previousElementSibling == div1.parentElement.nextElementSibling && div2.parentElement.previousElementSibling.classList.contains('multiply'))
                     {
-                        if((div2.parentElement.children[1].classList.contains('plus') || div2.parentElement.children[1].contains('minus')) && (div1.parentElement.children[1].classList.contains('plus') || div1.parentElement.children[1].contains('minus')))
+                        if((div2.parentElement.children[1].classList.contains('plus') || div2.parentElement.children[1].classList.contains('minus')) && (div1.parentElement.children[1].classList.contains('plus') || div1.parentElement.children[1].classList.contains('minus')))
                         {
                             var op = div2.parentElement.previousElementSibling
                             var a = parseFloat(div2.parentElement.children[0].innerHTML);
@@ -87,7 +87,7 @@ function MathOperation(div1, div2)
                                 ap.replaceWith(reshtml);
                                 //ap.append(reshtml);
                             }
-                            if(reshtml.innerHTML.toString()[0] == '-')
+                            /*if(reshtml.innerHTML.toString()[0] == '-')
                                 {
                                     if(reshtml.previousElementSibling && reshtml.previousElementSibling.classList.contains('operator'))
                                     {
@@ -99,7 +99,7 @@ function MathOperation(div1, div2)
                                         neg.classList.add('operator', 'minus');
                                         reshtml.insertAdjacentElement('beforebegin', neg);
                                     }
-                                }
+                                }*/
                         }
                     }
                 }
@@ -107,7 +107,7 @@ function MathOperation(div1, div2)
                 {
                     if(div1.parentElement.previousElementSibling === div2.parentElement.nextElementSibling && div1.parentElement.previousElementSibling.classList.contains('multiply'))
                     {
-                        if((div2.parentElement.children[1].classList.contains('plus') || div2.parentElement.children[1].contains('minus')) && (div1.parentElement.children[1].classList.contains('plus') || div1.parentElement.children[1].contains('minus')))
+                        if((div2.parentElement.children[1].classList.contains('plus') || div2.parentElement.children[1].classList.contains('minus')) && (div1.parentElement.children[1].classList.contains('plus') || div1.parentElement.children[1].classList.contains('minus')))
                         {
                             var op = div1.parentElement.previousElementSibling;
                             var a = parseFloat(div2.parentElement.children[0].innerHTML);
@@ -136,7 +136,7 @@ function MathOperation(div1, div2)
                                 ap.replaceWith(reshtml);
                                 //ap.append(reshtml);
                             }
-                            if(reshtml.innerHTML.toString()[0] == '-')
+                            /*if(reshtml.innerHTML.toString()[0] == '-')
                                 {
                                     if(reshtml.previousElementSibling && reshtml.previousElementSibling.classList.contains('operator'))
                                     {
@@ -148,7 +148,7 @@ function MathOperation(div1, div2)
                                         neg.classList.add('operator', 'minus');
                                         reshtml.insertAdjacentElement('beforebegin', neg);
                                     }
-                                }
+                                }*/
                         }
                     }
                 }
@@ -188,7 +188,7 @@ function MathOperation(div1, div2)
                             div1.replaceWith(reshtml);
                             op.remove();
                             div2.remove();
-                            if(reshtml.innerHTML.toString()[0] == '-')
+                            /*if(reshtml.innerHTML.toString()[0] == '-')
                                 {
                                     if(reshtml.previousElementSibling && reshtml.previousElementSibling.classList.contains('operator'))
                                     {
@@ -200,7 +200,7 @@ function MathOperation(div1, div2)
                                         neg.classList.add('operator', 'minus');
                                         reshtml.insertAdjacentElement('beforebegin', neg);
                                     }
-                                }
+                                }*/
                         }
                     }
                     else if(div2.previousElementSibling && div1.nextElementSibling)
@@ -227,7 +227,7 @@ function MathOperation(div1, div2)
                             div1.replaceWith(reshtml);
                             op.remove();
                             div2.remove();
-                            if(reshtml.innerHTML.toString()[0] == '-')
+                            /*if(reshtml.innerHTML.toString()[0] == '-')
                                 {
                                     if(reshtml.previousElementSibling && reshtml.previousElementSibling.classList.contains('operator'))
                                     {
@@ -239,7 +239,7 @@ function MathOperation(div1, div2)
                                         neg.classList.add('operator', 'minus');
                                         reshtml.insertAdjacentElement('beforebegin', neg);
                                     }
-                                }
+                                }*/
                         }
                     }
                 }
@@ -278,7 +278,7 @@ function MathOperation(div1, div2)
                                     ap.replaceWith(reshtml);
                                     //ap.append(reshtml);
                                 }
-                                if(reshtml.innerHTML.toString()[0] == '-')
+                                /*if(reshtml.innerHTML.toString()[0] == '-')
                                 {
                                     if(reshtml.previousElementSibling && reshtml.previousElementSibling.classList.contains('operator'))
                                     {
@@ -290,7 +290,7 @@ function MathOperation(div1, div2)
                                         neg.classList.add('operator', 'minus');
                                         reshtml.insertAdjacentElement('beforebegin', neg);
                                     }
-                                }
+                                }*/
                             }
                         }
                     }
@@ -327,7 +327,7 @@ function MathOperation(div1, div2)
                                     ap.replaceWith(reshtml);
                                     //ap.append(reshtml);
                                 }
-                                if(reshtml.innerHTML.toString()[0] == '-')
+                                /*if(reshtml.innerHTML.toString()[0] == '-')
                                 {
                                     if(reshtml.previousElementSibling && reshtml.previousElementSibling.classList.contains('operator'))
                                     {
@@ -339,7 +339,7 @@ function MathOperation(div1, div2)
                                         neg.classList.add('operator', 'minus');
                                         reshtml.insertAdjacentElement('beforebegin', neg);
                                     }
-                                }
+                                }*/
                             }
                         }
                     }
@@ -432,7 +432,7 @@ function MathOperation(div1, div2)
                             div1.replaceWith(reshtml);
                             op.remove();
                             div2.remove();
-                            if(reshtml.innerHTML.toString()[0] == '-')
+                            /*if(reshtml.innerHTML.toString()[0] == '-')
                                 {
                                     if(reshtml.previousElementSibling && reshtml.previousElementSibling.classList.contains('operator'))
                                     {
@@ -444,7 +444,7 @@ function MathOperation(div1, div2)
                                         neg.classList.add('operator', 'minus');
                                         reshtml.insertAdjacentElement('beforebegin', neg);
                                     }
-                                }
+                                }*/
                         }
                     }
                     else if(div2.previousElementSibling && div1.nextElementSibling)
@@ -471,7 +471,7 @@ function MathOperation(div1, div2)
                             div1.replaceWith(reshtml);
                             op.remove();
                             div2.remove();
-                            if(reshtml.innerHTML.toString()[0] == '-')
+                            /*if(reshtml.innerHTML.toString()[0] == '-')
                                 {
                                     if(reshtml.previousElementSibling && reshtml.previousElementSibling.classList.contains('operator'))
                                     {
@@ -483,7 +483,7 @@ function MathOperation(div1, div2)
                                         neg.classList.add('operator', 'minus');
                                         reshtml.insertAdjacentElement('beforebegin', neg);
                                     }
-                                }
+                                }*/
                         }
                     }
                 }
@@ -523,7 +523,7 @@ function MathOperation(div1, div2)
                             div1.replaceWith(reshtml);
                             op.remove();
                             div2.remove();
-                            if(reshtml.innerHTML.toString()[0] == '-')
+                            /*if(reshtml.innerHTML.toString()[0] == '-')
                                 {
                                     if(reshtml.previousElementSibling && reshtml.previousElementSibling.classList.contains('operator'))
                                     {
@@ -535,7 +535,7 @@ function MathOperation(div1, div2)
                                         neg.classList.add('operator', 'minus');
                                         reshtml.insertAdjacentElement('beforebegin', neg);
                                     }
-                                }
+                                }*/
                         }
                     }
                     else if(div2.previousElementSibling && div1.nextElementSibling)
@@ -562,7 +562,7 @@ function MathOperation(div1, div2)
                             div1.replaceWith(reshtml);
                             op.remove();
                             div2.remove();
-                            if(reshtml.innerHTML.toString()[0] == '-')
+                            /*if(reshtml.innerHTML.toString()[0] == '-')
                                 {
                                     if(reshtml.previousElementSibling && reshtml.previousElementSibling.classList.contains('operator'))
                                     {
@@ -574,7 +574,7 @@ function MathOperation(div1, div2)
                                         neg.classList.add('operator', 'minus');
                                         reshtml.insertAdjacentElement('beforebegin', neg);
                                     }
-                                }
+                                }*/
                         }
                     }
                 }
@@ -610,7 +610,7 @@ function MathOperation(div1, div2)
                             div1.replaceWith(reshtml);
                             op.remove();
                             div2.remove();
-                            if(reshtml.innerHTML.toString()[0] == '-')
+                            /*if(reshtml.innerHTML.toString()[0] == '-')
                                 {
                                     if(reshtml.previousElementSibling && reshtml.previousElementSibling.classList.contains('operator'))
                                     {
@@ -622,7 +622,7 @@ function MathOperation(div1, div2)
                                         neg.classList.add('operator', 'minus');
                                         reshtml.insertAdjacentElement('beforebegin', neg);
                                     }
-                                }
+                                }*/
                         }
                     }
                     else if(div2.previousElementSibling && div1.nextElementSibling)
@@ -649,7 +649,7 @@ function MathOperation(div1, div2)
                             div1.replaceWith(reshtml);
                             op.remove();
                             div2.remove();
-                            if(reshtml.innerHTML.toString()[0] == '-')
+                            /*if(reshtml.innerHTML.toString()[0] == '-')
                                 {
                                     if(reshtml.previousElementSibling && reshtml.previousElementSibling.classList.contains('operator'))
                                     {
@@ -661,7 +661,7 @@ function MathOperation(div1, div2)
                                         neg.classList.add('operator', 'minus');
                                         reshtml.insertAdjacentElement('beforebegin', neg);
                                     }
-                                }
+                                }*/
                         }
                     }
                 }
@@ -758,26 +758,29 @@ function MathOperation(div1, div2)
                         div1.replaceWith(reshtml);
                         op.remove();
                         div2.remove();
+                        //var cn = reshtml.previousElementSibling;
                         if(reshtml.parentElement.children.length == 1)
                         {
                             var d = document.createElement('div');
                             d.classList.add('numb');
                             d.innerHTML = reshtml.innerHTML;
                             reshtml.parentElement.replaceWith(d);
+                            //cn = d.previousElementSibling;
                         }
-                        if(reshtml.innerHTML.toString()[0] == '-')
-                                {
-                                    if(reshtml.previousElementSibling && reshtml.previousElementSibling.classList.contains('operator'))
-                                    {
-                                        reshtml.previousElementSibling.innerHTML = '&minus;'
-                                    }
-                                    else
-                                    {
-                                        var neg = document.createElement('div');
-                                        neg.classList.add('operator', 'minus');
-                                        reshtml.insertAdjacentElement('beforebegin', neg);
-                                    }
-                                }
+                        /*if(res < 0)
+                        {
+                            if(cn && cn.classList.contains('operator'))
+                            {
+                                cn.previousElementSibling.innerHTML = '&minus;'
+                            }
+                            else
+                            {
+                                var neg = document.createElement('div');
+                                neg.classList.add('operator', 'minus');
+                                neg.innerHTML = '&minus;';
+                                d? d.insertAdjacentElement('beforebegin', neg) : reshtml.insertAdjacentElement('beforebegin', neg);
+                            }
+                        }*/
                     }
                 }
                 else if(div2.previousElementSibling != null && div1.nextElementSibling != null && div2.previousElementSibling == div1.nextElementSibling)
@@ -806,26 +809,29 @@ function MathOperation(div1, div2)
                         div1.replaceWith(reshtml);
                         op.remove();
                         div2.remove();
+                        //var cn = reshtml.previousElementSibling;
                         if(reshtml.parentElement.children.length == 1)
                         {
                             var d = document.createElement('div');
                             d.classList.add('numb');
                             d.innerHTML = reshtml.innerHTML;
                             reshtml.parentElement.replaceWith(d);
+                            //cn = d.previousElementSibling;
                         }
-                        if(reshtml.innerHTML.toString()[0] == '-')
-                                {
-                                    if(reshtml.previousElementSibling && reshtml.previousElementSibling.classList.contains('operator'))
-                                    {
-                                        reshtml.previousElementSibling.innerHTML = '&minus;'
-                                    }
-                                    else
-                                    {
-                                        var neg = document.createElement('div');
-                                        neg.classList.add('operator', 'minus');
-                                        reshtml.insertAdjacentElement('beforebegin', neg);
-                                    }
-                                }
+                        /*if(res < 0)
+                        {
+                            if(cn && cn.classList.contains('operator'))
+                            {
+                                cn.previousElementSibling.innerHTML = '&minus;'
+                            }
+                            else
+                            {
+                                var neg = document.createElement('div');
+                                neg.classList.add('operator', 'minus');
+                                neg.innerHTML = '&minus;';
+                                d? d.insertAdjacentElement('beforebegin', neg) : reshtml.insertAdjacentElement('beforebegin', neg);
+                            }
+                        }*/
                     }
                 }
             }
@@ -841,7 +847,7 @@ function MathOperation(div1, div2)
                     {
                         if(div2.previousElementSibling == div1.nextElementSibling && div2.previousElementSibling.classList.contains('multiply'))
                         {
-                            if((div2.children[1].classList.contains('plus') || div2.children[1].contains('minus')) && (div1.children[1].classList.contains('plus') || div1.children[1].contains('minus')))
+                            if((div2.children[1].classList.contains('plus') || div2.children[1].contains('minus')) && (div1.children[1].classList.contains('plus') || div1.children[1].classList.contains('minus')))
                             {
                                 var op = div2.previousElementSibling
                                 var a = parseFloat(div2.children[0].innerHTML);
@@ -871,7 +877,7 @@ function MathOperation(div1, div2)
                                     ap.replaceWith(reshtml);
                                     //ap.append(reshtml);
                                 }
-                                if(reshtml.innerHTML.toString()[0] == '-')
+                                /*if(reshtml.innerHTML.toString()[0] == '-')
                                 {
                                     if(reshtml.previousElementSibling && reshtml.previousElementSibling.classList.contains('operator'))
                                     {
@@ -883,7 +889,7 @@ function MathOperation(div1, div2)
                                         neg.classList.add('operator', 'minus');
                                         reshtml.insertAdjacentElement('beforebegin', neg);
                                     }
-                                }
+                                }*/
                             }
                         }
                     }
@@ -891,7 +897,7 @@ function MathOperation(div1, div2)
                     {
                         if(div1.previousElementSibling === div2.nextElementSibling && div1.previousElementSibling.classList.contains('multiply'))
                         {
-                            if((div2.children[1].classList.contains('plus') || div2.children[1].contains('minus')) && (div1.children[1].classList.contains('plus') || div1.children[1].contains('minus')))
+                            if((div2.children[1].classList.contains('plus') || div2.children[1].classList.contains('minus')) && (div1.children[1].classList.contains('plus') || div1.children[1].classList.contains('minus')))
                             {
                                 var op = div1.previousElementSibling;
                                 var a = parseFloat(div2.children[0].innerHTML);
@@ -921,7 +927,7 @@ function MathOperation(div1, div2)
                                     ap.replaceWith(reshtml);
                                     //ap.append(reshtml);
                                 }
-                                if(reshtml.innerHTML.toString()[0] == '-')
+                                /*if(reshtml.innerHTML.toString()[0] == '-')
                                 {
                                     if(reshtml.previousElementSibling && reshtml.previousElementSibling.classList.contains('operator'))
                                     {
@@ -933,7 +939,7 @@ function MathOperation(div1, div2)
                                         neg.classList.add('operator', 'minus');
                                         reshtml.insertAdjacentElement('beforebegin', neg);
                                     }
-                                }
+                                }*/
                             }
                         }
                     }
@@ -980,7 +986,7 @@ function MathOperation(div1, div2)
                                     ap.replaceWith(reshtml);
                                     //ap.append(reshtml);
                                 }
-                                if(reshtml.innerHTML.toString()[0] == '-')
+                                /*if(reshtml.innerHTML.toString()[0] == '-')
                                 {
                                     if(reshtml.previousElementSibling && reshtml.previousElementSibling.classList.contains('operator'))
                                     {
@@ -992,7 +998,7 @@ function MathOperation(div1, div2)
                                         neg.classList.add('operator', 'minus');
                                         reshtml.insertAdjacentElement('beforebegin', neg);
                                     }
-                                }
+                                }*/
                             }
                         }
                     }
@@ -1030,7 +1036,7 @@ function MathOperation(div1, div2)
                                     ap.replaceWith(reshtml);
                                     //ap.append(reshtml);
                                 }
-                                if(reshtml.innerHTML.toString()[0] == '-')
+                                /*if(reshtml.innerHTML.toString()[0] == '-')
                                 {
                                     if(reshtml.previousElementSibling && reshtml.previousElementSibling.classList.contains('operator'))
                                     {
@@ -1042,7 +1048,7 @@ function MathOperation(div1, div2)
                                         neg.classList.add('operator', 'minus');
                                         reshtml.insertAdjacentElement('beforebegin', neg);
                                     }
-                                }
+                                }*/
                             }
                         }
                     }
